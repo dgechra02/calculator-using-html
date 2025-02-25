@@ -11,18 +11,26 @@
 
         body {
             background-color: gray;
-            min-height: 100vh;
         }
         
         .container {
             padding: 30px;
-            width: 20vw;
+            width: 30%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             background-color: aquamarine;
             margin: 100px auto;
+            box-shadow: 1px 2px 5px black;
+            transition: width 0.5s ease-in-out;
+        }
+
+
+        @media (max-width: 800px) {
+            .container {
+                width: 60%;
+            }
         }
 
     </style>
@@ -33,7 +41,7 @@
         <h1>Calculator</h1>
         <main>
             <form oninput="result.value =  eval(parseInt(num1.value) + operator.value + parseInt(range.value))">
-                <input type="number" id="num1" name="num1" placeholder="Enter first number" ><br><br>
+                <input type="number" id="num1" name="num1" placeholder="Enter number" ><br><br>
                 <select name="operator" id="operator">
                     <option value="+">+</option>
                     <option value="-">-</option>
