@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://m.media-amazon.com/images/I/61MUR89OpzL.jpg">
+    <meta name="description" coontent="this is simple calculator by just using html and css">
+    <title>Calculator</title>
+    
+    <style>
+
+        body {
+            background-color: gray;
+            min-height: 100vh;
+        }
+        
+        .container {
+            padding: 30px;
+            width: 20vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+            margin: 100px auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calculator</h1>
+        <main>
+            <form oninput="result.value =  eval(parseInt(num1.value) + operator.value + parseInt(range.value))">
+                <input type="number" id="num1" name="num1" placeholder="Enter first number" ><br><br>
+                <select name="operator" id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select><br><br>
+                <!-- <input type="number" id="num2" name="num2" placeholder="Enter second number"><br><br> -->
+                <input type="range" name="range" id="range" min="0" max="1000"> <br><br>
+                <span>=</span>
+                <output name="result"></output>
+            </form>
+
+
+        </main>
+    </div>
+    
+</body>
+</html>
